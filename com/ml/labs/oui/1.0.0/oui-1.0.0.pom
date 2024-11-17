@@ -110,11 +110,10 @@
             <version>4.4.0</version>
             <scope>compile</scope>
         </dependency>
-
         <!-- Custom Dependency -->
         <dependency>
-            <groupId>com.ml.labs</groupId>
-            <artifactId>mevento</artifactId>
+            <groupId>com.github.molobala</groupId>
+            <artifactId>mevento-kt</artifactId>
             <version>1.0.3</version>
             <scope>compile</scope>
         </dependency>
