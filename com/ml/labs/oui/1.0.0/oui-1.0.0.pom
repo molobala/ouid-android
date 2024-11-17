@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ml.labs</groupId>
+    <artifactId>oui</artifactId>
+    <version>1.0.0</version>
+    <packaging>aar</packaging>
+
+    <dependencies>
+        <!-- AndroidX Libraries -->
+        <dependency>
+            <groupId>androidx.core</groupId>
+            <artifactId>core-ktx</artifactId>
+            <version>1.13.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.activity</groupId>
+            <artifactId>activity-ktx</artifactId>
+            <version>1.9.3</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Google Material -->
+        <dependency>
+            <groupId>com.google.android.material</groupId>
+            <artifactId>material</artifactId>
+            <version>1.12.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Flexbox Layout -->
+        <dependency>
+            <groupId>com.google.android.flexbox</groupId>
+            <artifactId>flexbox</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Glide -->
+        <dependency>
+            <groupId>com.github.bumptech.glide</groupId>
+            <artifactId>glide</artifactId>
+            <version>4.16.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.bumptech.glide</groupId>
+            <artifactId>annotations</artifactId>
+            <version>4.16.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- SVG Library -->
+        <dependency>
+            <groupId>com.caverock</groupId>
+            <artifactId>androidsvg-aar</artifactId>
+            <version>1.4</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- CircleImageView -->
+        <dependency>
+            <groupId>de.hdodenhof</groupId>
+            <artifactId>circleimageview</artifactId>
+            <version>3.1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Retrofit -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>2.9.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>2.9.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Kotlin Coroutines -->
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-core</artifactId>
+            <version>1.7.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-android</artifactId>
+            <version>1.7.3</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Auth0 JWT -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>4.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Custom Dependency -->
+        <dependency>
+            <groupId>com.ml.labs</groupId>
+            <artifactId>mevento</artifactId>
+            <version>1.0.3</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Annotation Processor (Glide Compiler) -->
+        <dependency>
+            <groupId>com.github.bumptech.glide</groupId>
+            <artifactId>compiler</artifactId>
+            <version>4.14.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Testing Dependencies (Optional) -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.test.ext</groupId>
+            <artifactId>junit</artifactId>
+            <version>1.2.1</version>
+            <scope>androidTest</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.test.espresso</groupId>
+            <artifactId>espresso-core</artifactId>
+            <version>3.6.1</version>
+            <scope>androidTest</scope>
+        </dependency>
+    </dependencies>
+</project>
