@@ -37,7 +37,7 @@ Jitpack will allow you fetching MEvento dependancy, since OUIDesigner has depend
 
 dependencies {
     implementation 'com.github.molobala:mevento-kt:1.0.5'
-    implementation 'com.ml.labs:oui:1.0.5'
+    implementation 'com.ml.labs:oui:1.0.2'
 }
 
 ```
