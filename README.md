@@ -243,3 +243,12 @@ class MyComponentParser: ViewParser {
 ```
 
 This way the saving and restoration of state are handled automatically by the SDK.
+## ImageView and SVG
+
+The imageview component exposed in OUIDesigner handles view of type images, it uses [de.hdodenhof:circleimageview](https://github.com/hdodenhof/CircleImageView) for avatar type image, [Glide](https://github.com/bumptech/glide) for image loading.  
+For OUIDesigner to be able to load svg images, you need to expose an AppGlideModule somewhere in your project.  
+
+```kotlin
+@GlideModule
+class YourAppGlideModule : AppGlideModule()
+```
