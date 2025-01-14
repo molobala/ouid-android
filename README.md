@@ -79,7 +79,34 @@ OUI.mode = OUI.OUIMode.development
 ```
 
 In this mode you can test your services while developing theme without the need to publish them. This mode works only if the apk is in `debug` build config.
+## Theming
+By default, the SDK will try to pick material theme if available, else it will false on the default theme or the internal theme which is customizable through the SDK.  
+Assuming we want to setup the SDK with compose theme, we can proceed like this:
 
+```kotlin
+setContent {
+    OuiTheme {
+        OUITheme.setup(
+            theme = OUITheme.INTERNAL_THEME,
+            primary = MaterialTheme.colorScheme.primary.toArgb(),
+            onPrimary = MaterialTheme.colorScheme.onPrimary.toArgb(),
+            secondary = MaterialTheme.colorScheme.secondary.toArgb(),
+            onSecondary = MaterialTheme.colorScheme.onSecondary.toArgb(),
+            tertiary = MaterialTheme.colorScheme.tertiary.toArgb(),
+            onTertiary = MaterialTheme.colorScheme.onTertiary.toArgb(),
+            error = MaterialTheme.colorScheme.error.toArgb(),
+            onError = MaterialTheme.colorScheme.onError.toArgb(),
+            outline = MaterialTheme.colorScheme.onBackground.toArgb(),
+            background = MaterialTheme.colorScheme.background.toArgb(),
+            onBackground = MaterialTheme.colorScheme.onBackground.toArgb(),
+        )
+        Greeting(name = "Hi", Modifier.clickable {
+            OUICommonHelper.openPage(this@MainActivity, page)
+        })
+        UIServiceItems(stream!!)
+    }
+}
+```
 ## Access services
 
 Once the setup done, you can access the OUIDesigner services through the SDK. 
