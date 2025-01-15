@@ -33,7 +33,7 @@ repositories {
 }
 
 ```
-Jitpack will allow you fetching MEvento dependancy, since OUIDesigner has dependency on MEvento
+Jitpack will allow you fetching [MEvento](https://github.com/molobala/mevento-kt) dependancy, since OUIDesigner has dependency on MEvento
 
 ## Dependencies
 
@@ -278,4 +278,28 @@ For OUIDesigner to be able to load svg images, you need to expose an AppGlideMod
 ```kotlin
 @GlideModule
 class YourAppGlideModule : AppGlideModule()
+```
+
+## Routing
+In every application routing aspect is quite unavoidable, in OUIDesigner, routing are handling throught `ORouter` interface which defines bellow methods:
+* **`fun push(page: UIPage, params: Any?): CompletableFuture<Any?>?`**: called when OUIDesigner need to navigate forward on new page, generally triggered by `push(page, params)` function from [MEvento](https://github.com/molobala/mevento-kt) script.
+* **`fun modal(vm: MEvento?, page: UIPage, params: Any?, options: Map<*, *>?): CompletableFuture<Any?>?`**: caled when OUIDesigner want to display a modal when `modal(page, params)` function is called from [MEvento](https://github.com/molobala/mevento-kt) script.
+* **`fun pop(context: Context): Boolean`**: called when `back()` function is triggered from [MEvento](https://github.com/molobala/mevento-kt) script to order OUIDesigner to pop current page.
+* **`fun navigateTo(url: String)`**: binded to `navigateTo(url)` function in [MEvento](https://github.com/molobala/mevento-kt) script, it allows internal navigation to a specific page in the application.
+
+The SDK hold a default implementation of ORouter based on fragmentManager called `FragmentRouter`, this router is the default router used by `OUIpageRender` which is it-self the default page renderer in the SDK. In case you don't use `OUIPageRender` (default page renderer), you can set the fallback router through `OUI.router` setter method. 
+
+`OUIPageRender` exposes a setter method allowing to define the appropriate way to construct routers, its signature is like this: `var routerProvider: ((manager: FragmentManager, containerId: Int) -> FragmentRouter)? = null`. That way one can create a custome FragmentRouter, overrides appropriates methods and provide it to the default page renderer easily.
+
+```kotlin
+
+class CustomFragmentRouter(manager: FragmentManager, containerId: Int): FragmentRouter(manager, containerId) {
+    override fun pop(context: Context): Boolean {
+        Log.i(TAG, "Custom router")
+        return false
+    }
+}
+
+OUIPageRender.routerProvider = {fragmentManager, containerId -> CustomFragmentRouter(fragmentManager, containerId)}
+
 ```
