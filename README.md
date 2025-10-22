@@ -1,7 +1,7 @@
 # OUIDesigner Android SDK
 The SDK that enables OUIDesigner integration in Android Native projects.
 
-Below OUIDesigner global architecture.
+Below OUIDesigner global architecture schema.
 
 ![Architecture](assets/ouib.png)  
 
