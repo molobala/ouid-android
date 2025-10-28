@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ml.labs</groupId>
+    <artifactId>oui-runtime</artifactId>
+    <version>1.0.1</version>
+    <packaging>aar</packaging>
+
+    <dependencies>
+        <!-- AndroidX Libraries -->
+        <dependency>
+            <groupId>androidx.core</groupId>
+            <artifactId>core-ktx</artifactId>
+            <version>1.13.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Google Material -->
+        <dependency>
+            <groupId>com.google.android.material</groupId>
+            <artifactId>material</artifactId>
+            <version>1.12.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Flexbox Layout -->
+        <dependency>
+            <groupId>com.google.android.flexbox</groupId>
+            <artifactId>flexbox</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.webkit</groupId>
+            <artifactId>webkit</artifactId>
+            <version>1.14.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.caoccao.javet</groupId>
+            <artifactId>javet-v8-android</artifactId>
+            <version>4.1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.coil-kt.coil3</groupId>
+            <artifactId>coil</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.coil-kt.coil3</groupId>
+            <artifactId>coil-network-okhttp</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+       
+       
+        <!-- Retrofit -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>2.9.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>2.9.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!-- Testing Dependencies (Optional) -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.test.ext</groupId>
+            <artifactId>junit</artifactId>
+            <version>1.2.1</version>
+            <scope>androidTest</scope>
+        </dependency>
+        <dependency>
+            <groupId>androidx.test.espresso</groupId>
+            <artifactId>espresso-core</artifactId>
+            <version>3.6.1</version>
+            <scope>androidTest</scope>
+        </dependency>
+    </dependencies>
+</project>
