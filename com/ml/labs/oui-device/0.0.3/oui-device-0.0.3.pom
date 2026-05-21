@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ml.labs</groupId>
+    <artifactId>oui-device</artifactId>
+    <version>0.0.3</version>
+    <packaging>aar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ml.labs</groupId>
+            <artifactId>oui-runtime</artifactId>
+            <version>1.1.7</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>androidx.core</groupId>
+            <artifactId>core-ktx</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>androidx.fragment</groupId>
+            <artifactId>fragment-ktx</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>androidx.biometric</groupId>
+            <artifactId>biometric</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.mlkit</groupId>
+            <artifactId>barcode-scanning</artifactId>
+            <version>17.3.0</version>
+        </dependency>
+
+    </dependencies>
+</project>
